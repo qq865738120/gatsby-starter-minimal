@@ -85,6 +85,7 @@ $mainColor: #228be6;
         position: relative;
         color: $textColor1;
         text-decoration: none;
+        cursor: pointer;
       }
       a:after {
         content: "";
@@ -126,6 +127,17 @@ $mainColor: #228be6;
           font-size: 14px;
           margin: 0px;
         }
+      }
+    }
+    .center-moble {
+      display: none;
+    }
+    @media (max-width: 760px) {
+      .center-moble {
+        display: block;
+      }
+      .center-pc {
+        display: none;
       }
     }
   }
@@ -453,6 +465,9 @@ $mainColor: #228be6;
           }
           .right {
             max-height: 512px;
+            .token-line {
+              max-width: calc(100% - 32px);
+            }
           }
         }
         @media (max-width: 760px) {

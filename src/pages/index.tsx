@@ -27,12 +27,12 @@ import {
   schoolList,
   skillList,
 } from "../common/home_data";
-import { useMediaQuery } from "@mantine/hooks";
+import { useMediaQuery, useScrollIntoView } from "@mantine/hooks";
 import { ResponsiveTreeMap } from "@nivo/treemap";
-import axios from "axios"
-import { useNotifications } from '@mantine/notifications';
-import { isBrowser } from '../utils/index'
-import AsciinemaPlayer from '../lib/asciinema-player'
+import axios from "axios";
+import { useNotifications } from "@mantine/notifications";
+import { isBrowser } from "../utils/index";
+import AsciinemaPlayer from "../lib/asciinema-player";
 
 // markup
 const IndexPage = () => {
@@ -41,28 +41,34 @@ const IndexPage = () => {
   const [isOpenMenu, setIsOpenMenu] = React.useState(false);
   const isPhone = useMediaQuery("(max-width: 760px)");
   const notifications = useNotifications();
+  const scrollIntoView1 = useScrollIntoView({ offset: 80 });
+  const scrollIntoView2 = useScrollIntoView({ offset: 80 });
+  const scrollIntoView3 = useScrollIntoView({ offset: 80 });
+  const scrollIntoView4 = useScrollIntoView({ offset: 80 });
+  const scrollIntoView5 = useScrollIntoView({ offset: 80 });
+  const scrollIntoView6 = useScrollIntoView({ offset: 80 });
 
   React.useEffect(() => {
     const player = [];
     if (isBrowser()) {
       projectList
-      .filter((item) => item.player)
-      .map((item) => {
-        player.push(
-          (AsciinemaPlayer)({}).create(
-            `https://asciinema.org/a/${item.player}.cast`,
-            document.getElementById(item.player),
-            {
-              loop: true,
-              autoPlay: true,
-              idleTimeLimit: 1,
-              theme: "solarized-light",
-              cols: isPhone ? 47 : 75,
-              rows: isPhone ? 16 : 32,
-            }
-          )
-        );
-      });
+        .filter((item) => item.player)
+        .map((item) => {
+          player.push(
+            AsciinemaPlayer({}).create(
+              `https://asciinema.org/a/${item.player}.cast`,
+              document.getElementById(item.player),
+              {
+                loop: true,
+                autoPlay: true,
+                idleTimeLimit: 1,
+                theme: "solarized-light",
+                cols: isPhone ? 47 : 75,
+                rows: isPhone ? 16 : 32,
+              }
+            )
+          );
+        });
     }
 
     return () => {
@@ -71,34 +77,46 @@ const IndexPage = () => {
   }, []);
 
   React.useEffect(() => {
-    getAccess()
-  }, [])
+    getAccess();
+  }, []);
 
   const getAccess = async () => {
     try {
-      const res = await axios.get('https://server.ddnszwj.top/api/v1/personal-page/access')
+      const res = await axios.get(
+        "https://server.ddnszwj.top/api/v1/personal-page/access"
+      );
       if (res.data) {
         notifications.showNotification({
-          title: '通知',
+          title: "通知",
           autoClose: false,
           message: `欢迎访问我的个人主页，您是第${res.data.data}位访客！`,
-        })
+        });
       } else {
         notifications.showNotification({
-          icon: <i className="icon icon-close" style={{ fontSize: '16px', color: 'white' }} />,
+          icon: (
+            <i
+              className="icon icon-close"
+              style={{ fontSize: "16px", color: "white" }}
+            />
+          ),
           color: "red",
           message: `发生了一点意外，但不影响您正常访问。`,
-        })
+        });
       }
     } catch (error) {
       notifications.showNotification({
-        icon: <i className="icon icon-close" style={{ fontSize: '16px', color: 'white' }} />,
+        icon: (
+          <i
+            className="icon icon-close"
+            style={{ fontSize: "16px", color: "white" }}
+          />
+        ),
         color: "red",
         message: `发生了一点意外，但不影响您正常访问。`,
-      })
+      });
       console.error(error);
     }
-  }
+  };
 
   const onMenuClick = () => {
     setIsOpenMenu(!isOpenMenu);
@@ -107,6 +125,18 @@ const IndexPage = () => {
   const onNavigationClick = (index) => {
     console.log("index", index);
     setMenuIndex(index);
+    if (index < 2) {
+      scrollIntoView1.scrollIntoView();
+    } else {
+      [
+        scrollIntoView1,
+        scrollIntoView2,
+        scrollIntoView3,
+        scrollIntoView4,
+        scrollIntoView5,
+        scrollIntoView6,
+      ][index - 1].scrollIntoView();
+    }
   };
 
   return (
@@ -120,13 +150,23 @@ const IndexPage = () => {
           <img src={""} />
           <span>CODE_XIA</span>
         </div>
-        {(isOpenMenu || !isPhone) && (
-          <div className="center">
+        <div className="center center-pc">
+          {menu.map((item, index) => (
+            <a
+              className={index === menuIndex ? "active" : ""}
+              key={item.text}
+              onClick={onNavigationClick.bind(this, index)}
+            >
+              {item.text}
+            </a>
+          ))}
+        </div>
+        {isOpenMenu && (
+          <div className="center center-mobile">
             {menu.map((item, index) => (
               <a
                 className={index === menuIndex ? "active" : ""}
                 key={item.text}
-                href={item.href}
                 onClick={onNavigationClick.bind(this, index)}
               >
                 {item.text}
@@ -137,15 +177,34 @@ const IndexPage = () => {
         <div></div>
       </section>
 
-      <section className="part-1">
+      <section className="part-1" ref={scrollIntoView1.targetRef}>
         <div className="top">
           <img src="" />
-          <p className="title">啊啊啊</p>
-          <p className="desc">是打发斯蒂芬</p>
+          <p className="title">郑文军</p>
+          <p className="desc">前端开发工程师</p>
         </div>
-        <p className="content">
-          首付款had发框架had付首付款had发框架had付款会计师的合法客款会计师的首付款had发框架had付款会计师的合法客合法客首付款had发框架had付款会计师的合法客首付款ha首付款had发框架had付款会计师的合法客d发框架had付款会计师的合法客首付款had发框架had付款会计师的合法客户端方看法就开始的合法卡交电话费
-        </p>
+        <Highlight
+          className="content"
+          highlight={[
+            "5年",
+            "React",
+            "Vue",
+            "小程序",
+            "nodejs",
+            "Java",
+            "RN",
+            "flutter",
+            "Taro",
+            "Android",
+            "架构",
+            "Webpack",
+            "Rollup",
+            "Babel",
+            "质量",
+          ]}
+        >
+          具有5年前端开发经验，熟练使用React、Vue、小程序等前端框架。熟悉nodejs、Java等后端开发。对跨平台开发（RN、flutter、Taro）技术以及Android原生开发有一定的了解。具备前端项目架构能力，能够熟练使用Webpack、Rollup、Babel等前端工具链，能够不断解决疑难杂症，持续优化项目架构。关注最新技术热点，从而提不断升产品质量以及用户体验。
+        </Highlight>
         <div className="center">
           {infoList.map((item) => (
             <div key={item.icon} className="item">
@@ -164,9 +223,9 @@ const IndexPage = () => {
           <Bg1 />
         </div>
         <div className="body">
-          <h2>luli</h2>
-          <div className="box-1">
-            <h3>gongzuojingyan</h3>
+          <h2>履历</h2>
+          <div className="box-1" ref={scrollIntoView2.targetRef as any}>
+            <h3>工作经验</h3>
             <div className="item-warp">
               {companyList.map((item) => (
                 <div className="item" key={item.name}>
@@ -200,8 +259,8 @@ const IndexPage = () => {
             </div>
           </div>
 
-          <div className="box-2">
-            <h3>jiaoyu</h3>
+          <div className="box-2" ref={scrollIntoView3.targetRef as any}>
+            <h3>教育</h3>
             <div className="item-warp">
               <div className="left">
                 {schoolList.map((item) => (
@@ -217,7 +276,7 @@ const IndexPage = () => {
               </div>
               <div className="right">
                 <Image
-                  src="https://mantine.dev/static/dark-theme-image-6f35e745c6b3f25b9ed3b7d5fab1ec72.png"
+                  src={"../../school.jpeg"}
                   height={450}
                   width={700}
                   alt="Norway"
@@ -234,7 +293,7 @@ const IndexPage = () => {
         </div>
         <div className="body">
           <h2>chengjiu</h2>
-          <div className="box-1">
+          <div className="box-1" ref={scrollIntoView4.targetRef as any}>
             <h3>xiangmu</h3>
             {projectList.map((item) => (
               <div key={item.name} className="item">
@@ -317,30 +376,32 @@ const IndexPage = () => {
               </div>
             ))}
           </div>
-          <div className="box-2">
+          <div className="box-2" ref={scrollIntoView5.targetRef as any}>
             <h3>ji,neng</h3>
             <div className="content">
-              {isBrowser() && <ResponsiveTreeMap
-                data={skillList}
-                identity="name"
-                value="loc"
-                valueFormat=" >-0.0%"
-                label={(e) => e.id + " (" + e.formattedValue + ")"}
-                labelSkipSize={12}
-                labelTextColor={{
-                  from: "color",
-                  modifiers: [["darker", 1.2]],
-                }}
-                parentLabelTextColor={{
-                  from: "color",
-                  modifiers: [["darker", 2]],
-                }}
-                colors={{ scheme: "nivo" }}
-                borderColor="#ffffff"
-              />}
+              {isBrowser() && (
+                <ResponsiveTreeMap
+                  data={skillList}
+                  identity="name"
+                  value="loc"
+                  valueFormat=" >-0.0%"
+                  label={(e) => e.id + " (" + e.formattedValue + ")"}
+                  labelSkipSize={12}
+                  labelTextColor={{
+                    from: "color",
+                    modifiers: [["darker", 1.2]],
+                  }}
+                  parentLabelTextColor={{
+                    from: "color",
+                    modifiers: [["darker", 2]],
+                  }}
+                  colors={{ scheme: "nivo" }}
+                  borderColor="#ffffff"
+                />
+              )}
             </div>
           </div>
-          <div className="box-3">
+          <div className="box-3" ref={scrollIntoView6.targetRef as any}>
             <h3>rongyuchengjiu</h3>
             <SimpleGrid className="content" cols={2} spacing="lg">
               <div className="right">
