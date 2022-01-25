@@ -17,6 +17,7 @@ import {
   ScrollArea,
   Progress,
   Highlight,
+  Modal,
 } from "@mantine/core";
 import { Prism } from "@mantine/prism";
 import {
@@ -39,6 +40,8 @@ const IndexPage = () => {
   // const currentTheme = useSelector(state => state.theme);
   const [menuIndex, setMenuIndex] = React.useState(0);
   const [isOpenMenu, setIsOpenMenu] = React.useState(false);
+  const [isOpenImagePreview, setIsOpenImagePreview] = React.useState(false);
+  const [imagePreview, setImagePreview] = React.useState<any>({});
   const isPhone = useMediaQuery("(max-width: 760px)");
   const notifications = useNotifications();
   const scrollIntoView1 = useScrollIntoView({ offset: 80 });
@@ -63,7 +66,7 @@ const IndexPage = () => {
                 autoPlay: true,
                 idleTimeLimit: 1,
                 theme: "solarized-light",
-                cols: isPhone ? 47 : 75,
+                cols: isPhone ? 47 : 90,
                 rows: isPhone ? 16 : 32,
               }
             )
@@ -80,7 +83,7 @@ const IndexPage = () => {
     getAccess();
   }, []);
 
-  const getAccess = async () => {
+  const getAccess = React.useCallback(async () => {
     try {
       const res = await axios.get(
         "https://server.ddnszwj.top/api/v1/personal-page/access"
@@ -116,13 +119,13 @@ const IndexPage = () => {
       });
       console.error(error);
     }
-  };
+  }, []);
 
-  const onMenuClick = () => {
+  const onMenuClick = React.useCallback(() => {
     setIsOpenMenu(!isOpenMenu);
-  };
+  }, []);
 
-  const onNavigationClick = (index) => {
+  const onNavigationClick = React.useCallback((index) => {
     console.log("index", index);
     setMenuIndex(index);
     if (index < 2) {
@@ -137,7 +140,13 @@ const IndexPage = () => {
         scrollIntoView6,
       ][index - 1].scrollIntoView();
     }
-  };
+  }, []);
+
+  const onImageClick = React.useCallback((item) => {
+    console.log("aaaaaa");
+    setImagePreview(item);
+    setIsOpenImagePreview(true);
+  }, []);
 
   return (
     <main className={`index-page`}>
@@ -183,26 +192,7 @@ const IndexPage = () => {
           <p className="title">郑文军</p>
           <p className="desc">前端开发工程师</p>
         </div>
-        <Highlight
-          className="content"
-          highlight={[
-            "5年",
-            "React",
-            "Vue",
-            "小程序",
-            "nodejs",
-            "Java",
-            "RN",
-            "flutter",
-            "Taro",
-            "Android",
-            "架构",
-            "Webpack",
-            "Rollup",
-            "Babel",
-            "质量",
-          ]}
-        >
+        <Highlight className="content" highlight={["5年", "架构", "质量"]}>
           具有5年前端开发经验，熟练使用React、Vue、小程序等前端框架。熟悉nodejs、Java等后端开发。对跨平台开发（RN、flutter、Taro）技术以及Android原生开发有一定的了解。具备前端项目架构能力，能够熟练使用Webpack、Rollup、Babel等前端工具链，能够不断解决疑难杂症，持续优化项目架构。关注最新技术热点，从而提不断升产品质量以及用户体验。
         </Highlight>
         <div className="center">
@@ -292,60 +282,88 @@ const IndexPage = () => {
           <Bg2 />
         </div>
         <div className="body">
-          <h2>chengjiu</h2>
+          <h2>成就</h2>
           <div className="box-1" ref={scrollIntoView4.targetRef as any}>
-            <h3>xiangmu</h3>
+            <h3>项目</h3>
             {projectList.map((item) => (
               <div key={item.name} className="item">
                 <div className="top">
                   <Title order={4}>{item.name}</Title>
                   <div className="line">
-                    <Text weight={500} size="lg" style={{ color: "#1a1b1e" }}>
-                      xingzhi：
+                    <Text
+                      weight={500}
+                      size="lg"
+                      style={{ color: "#1a1b1e", flexShrink: "0" }}
+                    >
+                      类型：
                     </Text>
                     <Text size="lg" style={{ color: "#747f8a" }}>
                       {item.nature}
                     </Text>
                   </div>
-                  <div className="line">
-                    <Text weight={500} size="lg" style={{ color: "#1a1b1e" }}>
-                      zhize：
+                  <div className="line" style={{ alignItems: "center" }}>
+                    <Text
+                      weight={500}
+                      size="lg"
+                      style={{ color: "#1a1b1e", flexShrink: "0" }}
+                    >
+                      职责：
                     </Text>
                     <div>{item.duty}</div>
                   </div>
                   <div className="line">
-                    <Text weight={500} size="lg" style={{ color: "#1a1b1e" }}>
-                      jianjie：
+                    <Text
+                      weight={500}
+                      size="lg"
+                      style={{ color: "#1a1b1e", flexShrink: "0" }}
+                    >
+                      简介：
                     </Text>
                     <Text size="lg" style={{ color: "#747f8a" }}>
                       {item.detail}
                     </Text>
                   </div>
-                  <div className="line">
-                    <Text weight={500} size="lg" style={{ color: "#1a1b1e" }}>
-                      jishuzhan：
+                  <div className="line" style={{ alignItems: "center" }}>
+                    <Text
+                      weight={500}
+                      size="lg"
+                      style={{ color: "#1a1b1e", flexShrink: "0" }}
+                    >
+                      技术栈：
                     </Text>
                     <div>{item.technologies}</div>
                   </div>
-                  <div className="line">
-                    <Text weight={500} size="lg" style={{ color: "#1a1b1e" }}>
-                      yuandaima：
-                    </Text>
-                    <Text
-                      variant="link"
-                      component="a"
-                      href={item.codeLink}
-                      size="lg"
-                    >
-                      {item.codeLink}
-                    </Text>
-                  </div>
+                  {item.codeLink && (
+                    <div className="line">
+                      <Text
+                        weight={500}
+                        size="lg"
+                        style={{ color: "#1a1b1e", flexShrink: "0" }}
+                      >
+                        源代码：
+                      </Text>
+                      <Text
+                        variant="link"
+                        component="a"
+                        href={item.codeLink}
+                        size="lg"
+                      >
+                        {item.codeLink}
+                      </Text>
+                    </div>
+                  )}
                 </div>
                 <SimpleGrid className="center" cols={2} spacing="lg">
                   <div className="left">
                     {item.images ? (
                       <>
-                        <Image className="first-image" src={item.images[0]} />
+                        <Image
+                          radius="md"
+                          className="first-image"
+                          src={`../../${item.images[0].thumb}`}
+                          height={300}
+                          onClick={onImageClick.bind(this, item.images[0])}
+                        />
                         <SimpleGrid
                           cols={2}
                           spacing="xs"
@@ -354,7 +372,14 @@ const IndexPage = () => {
                           {item.images.map(
                             (it, index) =>
                               index !== 0 && (
-                                <Image className="image" src={it} key={it} />
+                                <Image
+                                  radius="md"
+                                  className="image"
+                                  src={`../../${it.thumb}`}
+                                  key={it.thumb}
+                                  height={200}
+                                  onClick={onImageClick.bind(this, it)}
+                                />
                               )
                           )}
                         </SimpleGrid>
@@ -366,7 +391,6 @@ const IndexPage = () => {
                   <ScrollArea className="right">
                     <Prism
                       className="right"
-                      withLineNumbers
                       language={item.code.language as any}
                     >
                       {item.code.text}
@@ -377,7 +401,7 @@ const IndexPage = () => {
             ))}
           </div>
           <div className="box-2" ref={scrollIntoView5.targetRef as any}>
-            <h3>ji,neng</h3>
+            <h3>技能</h3>
             <div className="content">
               {isBrowser() && (
                 <ResponsiveTreeMap
@@ -421,6 +445,15 @@ const IndexPage = () => {
           </div>
         </div>
       </section>
+
+      <Modal
+        opened={isOpenImagePreview}
+        onClose={() => setIsOpenImagePreview(false)}
+        size={imagePreview.width + 40}
+        title="图片预览"
+      >
+        <Image width={imagePreview.width} src={"../../" + imagePreview.thumb} />
+      </Modal>
     </main>
   );
 };

@@ -430,7 +430,7 @@ $mainColor: #228be6;
           line-height: 1.55;
           .line {
             display: flex;
-            align-items: center;
+            align-items: baseline;
             margin-top: 12px;
 
             > div {
@@ -444,17 +444,18 @@ $mainColor: #228be6;
           .left {
             .first-image,
             .image {
-              border: 1px solid;
+              border: 1px solid rgb(0 0 0 / 5%);
               border-radius: 8px;
+              overflow: hidden;
             }
-            .first-image {
-              width: 100%;
-              height: 300px;
-            }
-            .image {
-              height: 200px;
-              box-sizing: border-box;
-            }
+            // .first-image {
+            //   width: 100%;
+            //   height: 300px;
+            // }
+            // .image {
+            //   height: 200px;
+            //   box-sizing: border-box;
+            // }
             .preview {
               .line {
                 line-height: 1;
