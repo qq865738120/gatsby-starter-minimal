@@ -2619,6 +2619,14 @@ export const skillList = {
           loc: 0.9,
         },
         {
+          name: "Less",
+          loc: 0.9,
+        },
+        {
+          name: "Sass",
+          loc: 0.9,
+        },
+        {
           name: "Canvas",
           loc: 0.7,
         },
@@ -2655,6 +2663,10 @@ export const skillList = {
           loc: 0.8,
         },
         {
+          name: "Gatsby",
+          loc: 0.8,
+        },
+        {
           name: "Next",
           loc: 0.75,
         },
@@ -2665,10 +2677,6 @@ export const skillList = {
         {
           name: "Umi",
           loc: 0.75,
-        },
-        {
-          name: "Echarts",
-          loc: 0.9,
         },
         {
           name: "Echarts",
