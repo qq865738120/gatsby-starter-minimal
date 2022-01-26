@@ -67,7 +67,7 @@ const IndexPage = () => {
                 idleTimeLimit: 1,
                 theme: "solarized-light",
                 cols: isPhone ? 47 : 90,
-                rows: isPhone ? 16 : 32,
+                rows: isPhone ? 24 : 32,
               }
             )
           );
@@ -323,7 +323,7 @@ const IndexPage = () => {
                       {item.detail}
                     </Text>
                   </div>
-                  <div className="line" style={{ alignItems: "center" }}>
+                  <div className="line">
                     <Text
                       weight={500}
                       size="lg"

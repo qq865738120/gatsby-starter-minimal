@@ -430,12 +430,14 @@ $mainColor: #228be6;
           line-height: 1.55;
           .line {
             display: flex;
-            align-items: baseline;
+            align-items: flex-start;
             margin-top: 12px;
 
             > div {
               display: flex;
               align-items: center;
+              flex-wrap: wrap;
+              min-height: 28px;
             }
           }
         }

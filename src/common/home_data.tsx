@@ -1,4 +1,4 @@
-import { Badge, Highlight, List, Space } from "@mantine/core";
+import { Badge, Group, Highlight, List, Space } from "@mantine/core";
 import * as React from "react";
 
 export const menu = [
@@ -175,58 +175,48 @@ export const projectList = [
     name: "微商城",
     nature: "商业项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="red">
           架构优化
         </Badge>
-      </>
+      </Group>
     ),
     detail:
       "线上购药商城，同时支持h5端与小程序端。为不同商户托管小程序的开发与维护。支持商户个性化配置首页模板，同时根据不同用户需求可自由切换OBC模式、预约模式等。目前承载了上百家商户，高度自定义化，满足不同商户的个性化需求。",
     technologies: (
-      <>
+      <Group>
         <Badge variant="dot" color="teal">
           Taro
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="indigo">
           React
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="red">
           Mobx
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="blue">
           TypeScript
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="orange">
           Webpack
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="lime">
           Babel
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="pink">
           Sass
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="green">
           eslint
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="yellow">
           husky
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="cyan">
           sentry
         </Badge>
-      </>
+      </Group>
     ),
     codeLink: "",
     images: [
@@ -480,56 +470,46 @@ export default class Fans extends Component<IProps, IPageState> {
     name: "jks-cli",
     nature: "开源项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="yellow">
           界面设计
         </Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="red">
           架构设计
         </Badge>
-      </>
+      </Group>
     ),
     detail:
       "一款Jenkins命令行工具。实现了一键构建多个项目、保存构建命令、导入导出设置、构建完成通知等功能。",
     technologies: (
-      <>
+      <Group>
         <Badge variant="dot" color="pink">
           Ink
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="indigo">
           React
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot">NodeJs</Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="cyan">
           conf
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="violet">
           shelljs
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="orange">
           meow
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="blue">
           TypeScript
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="green">
           eslint
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="dark">
           ava
         </Badge>
-      </>
+      </Group>
     ),
     codeLink: "https://github.com/qq865738120/jks-cli",
     player: "464102",
@@ -699,52 +679,43 @@ export default RunView`,
     name: "UI组件库",
     nature: "商业项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-      </>
+      </Group>
     ),
     detail:
       "微商城项目通用组件库。封装了包括基础组件、复杂组件等一些业务无关的纯UI组件。",
     technologies: (
-      <>
+      <Group>
         <Badge variant="dot" color="teal">
           Taro
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="indigo">
           React
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="blue">
           TypeScript
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="orange">
           Webpack
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="lime">
           Babel
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="pink">
           Sass
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="green">
           eslint
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="yellow">
           husky
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="cyan">
           lerna
         </Badge>
-      </>
+      </Group>
     ),
-    codeLink: "",
     images: [
       { width: 400, height: 400, thumb: "3-1.jpg" },
       { width: 800, height: 400, thumb: "3-2.png" },
@@ -964,60 +935,49 @@ export default HdButton`,
     name: "coder-notifier",
     nature: "开源项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="yellow">
           界面设计
         </Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="red">
           架构设计
         </Badge>
-      </>
+      </Group>
     ),
     detail:
       "一款定时提醒命令行工具。通过预先设置一些提醒任务，就可以实现自动提醒喝水、休息等功能。未来还将引入插件机制，可以根据需求自行扩展。",
     technologies: (
-      <>
+      <Group>
         <Badge variant="dot" color="pink">
           Ink
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="indigo">
           React
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot">NodeJs</Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="cyan">
           schedule
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="violet">
           shelljs
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="orange">
           meow
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="blue">
           TypeScript
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="green">
           eslint
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="dark">
           ava
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="yellow">
           pm2
         </Badge>
-      </>
+      </Group>
     ),
     codeLink: "https://github.com/qq865738120/coder-notifier",
     player: "464113",
@@ -1239,36 +1199,31 @@ export default SaveView`,
     name: "taro-plugin-image-compress",
     nature: "开源项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="red">
           架构设计
         </Badge>
-      </>
+      </Group>
     ),
     detail:
       "一款自动化的图片无损压缩Taro插件，自动压缩项目中png、jpg/jpeg、gif、svg、webp格式的图片。采用异步压缩、缓存等机制提升速度。",
     technologies: (
-      <>
+      <Group>
         <Badge variant="dot" color="pink">
           imagemin
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="indigo">
           Taro
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot">NodeJs</Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="violet">
           jest
         </Badge>
-        <Space w="xs" />
         <Badge variant="dot" color="blue">
           TypeScript
         </Badge>
-      </>
+      </Group>
     ),
     codeLink: "https://github.com/qq865738120/taro-plugin-image-compress",
     player: "464119",
@@ -1369,13 +1324,12 @@ export default compress;`,
     name: "babel-plugin-console-clear",
     nature: "商业项目",
     duty: (
-      <>
+      <Group>
         <Badge variant="outline">前端开发</Badge>
-        <Space w="xs" />
         <Badge variant="outline" color="red">
           架构设计
         </Badge>
-      </>
+      </Group>
     ),
     detail:
       "清除代码中的console语句。根据需求可以自行配置需要保留的console语句，默认配置下清除所有。该插件提供两个可配置参数，ignore为string[]类型，ignoreTag为string[]类型，插件会匹配第一个参数中是否包含需要忽略的tag，包含的话则不清除。",
@@ -1393,7 +1347,7 @@ export default compress;`,
       { width: 400, height: 400, thumb: "6-3.png" },
     ],
     code: {
-      language: "tsx",
+      language: "js",
       text: `module.exports = function ({ types: t }) {
 return {
   visitor: {
@@ -1456,6 +1410,1181 @@ return {
 };`,
     },
   },
+  {
+    name: "home-page",
+    nature: "开源项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="yellow">
+          界面设计
+        </Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "个人导航页项目，采用Gatsby开发，支持ssr，支持yaml文件配置，无需修改代码。支持自动化部署，实现零门槛快速搭建自己的导航页",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="grape">
+          Gatsby
+        </Badge>
+        <Badge variant="dot" color="red">
+          Redux
+        </Badge>
+        <Badge variant="dot" color="indigo">
+          React
+        </Badge>
+        <Badge variant="dot" color="blue">
+          TypeScript
+        </Badge>
+        <Badge variant="dot" color="violet">
+          GraphiQL
+        </Badge>
+      </Group>
+    ),
+    codeLink: "https://github.com/qq865738120/home-page",
+    images: [
+      { width: 400, height: 400, thumb: "7-1.png" },
+      { width: 400, height: 400, thumb: "7-2.png" },
+      { width: 400, height: 400, thumb: "7-3.png" },
+    ],
+    code: {
+      language: "tsx",
+      text: `import * as React from "react";
+import "./home.scss";
+import InputComponent from "../components/input";
+import ThemeSwitchComponent from "../components/theme_switch";
+import ContentBoxComponent from "../components/content_box";
+import { graphql } from "gatsby";
+import backgroundLightImg from "../images/background_light.png";
+import backgroundDarkImg from "../images/background_dark.png";
+import { useSelector } from 'react-redux';
+
+// markup
+const IndexPage = () => {
+  const currentTheme = useSelector(state => state.theme);
+
+  return (
+    <main className={\`index-page index-page-\${currentTheme}\`}>
+      <section className="content">
+        <div className="theme-switch">
+          <ThemeSwitchComponent />
+        </div>
+        <InputComponent />
+        <ContentBoxComponent />
+      </section>
+
+      <img
+        className="background-img"
+        src={currentTheme === "light" ? backgroundLightImg : backgroundDarkImg}
+        alt="bg"
+      />
+      <img
+        className="background-cover"
+        src={currentTheme === "light" ? backgroundLightImg : backgroundDarkImg}
+        alt="bg"
+      />
+    </main>
+  );
+};
+
+export default IndexPage;`,
+    },
+  },
+  {
+    name: "自由视角小程序",
+    nature: "商业项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "一款视频小程序，支持360度全方位观看视频，同时支持缩放操作。用户可用实时操控视频视角，延迟极低，几乎无感知。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="grape">
+          axios
+        </Badge>
+        <Badge variant="dot" color="red">
+          websocket
+        </Badge>
+        <Badge variant="dot" color="indigo">
+          trtc
+        </Badge>
+      </Group>
+    ),
+    images: [
+      { width: 400, height: 400, thumb: "8-1.jpeg" },
+      { width: 400, height: 400, thumb: "8-2.jpeg" },
+      { width: 400, height: 400, thumb: "8-3.jpeg" },
+    ],
+    code: {
+      language: "javascript",
+      text: `/**
+* 首页
+*/
+import regeneratorRuntime from 'regenerator-runtime'
+import {
+  mapToData
+} from 'minii'
+import commonStore from '../../stores/common.js';
+import {
+  px2Rpx,
+  getIn
+} from '../../common/tools.js';
+
+const app = getApp()
+const sysInfo = wx.getSystemInfoSync();
+let orderField = "degree";
+let currentPage = 1;
+let searchVal = "";
+
+const connect = mapToData((state) => ({
+  isInit: state.common.isInit,
+  userInfo: state.common.userInfo,
+  isAuthorization: state.common.isAuthorization,
+  activityListRes: state.common.activityListRes,
+  activityType: state.common.activityType,
+}))
+
+Page(connect({
+  data: {
+    topBarSelected: 1,
+    listHeight: px2Rpx(sysInfo.windowHeight) - 200 + "rpx",
+    isLoading: false,
+    orderType: ["desc", "desc"] // 活动列表排序状态，desc降序，asc升序
+  },
+
+  async onLoad() {
+    const timer = setInterval(() => {
+      if (this.data.isInit) {
+        console.log("isAuthorization", this.data.isAuthorization);
+        clearInterval(timer);
+      }
+    }, 100);
+  },
+
+  onShow() {
+    currentPage = 1;
+    this.setData({
+      topBarSelected: 1,
+      orderType: ["desc", "desc"]
+    });
+    commonStore.refechActivityList({
+      orderField: "update_time",
+      condition: searchVal,
+      orderType: "desc",
+      ...this.data.activityType
+    });
+  },
+
+  async onSearch(e) {
+    await commonStore.refechActivityList({
+      orderField,
+      condition: e.detail.detail.value
+    });
+    searchVal = e.detail.detail.value;
+    currentPage = 1;
+  },
+
+  async onclean() {
+    searchVal = "";
+    currentPage = 1;
+    await commonStore.refechActivityList({
+      orderField,
+      condition: searchVal
+    });
+  },
+
+  onTopBarTap(e) {
+    const firstOrderType = this.data.orderType[0] === "desc" ? "asc" : "desc";
+    const secondOrderType = this.data.orderType[1] === "desc" ? "asc" : "desc";
+
+    if (e.currentTarget.dataset.index === 0 && this.data.topBarSelected === e.currentTarget.dataset.index) {
+      this.setData({
+        orderType: [firstOrderType, this.data.orderType[1]]
+      })
+    } else if (e.currentTarget.dataset.index === 1 && this.data.topBarSelected === e.currentTarget.dataset.index) {
+      this.setData({
+        orderType: [this.data.orderType[0], secondOrderType]
+      })
+    }
+
+    switch (e.currentTarget.dataset.index) {
+      case 0:
+        commonStore.refechActivityList({
+          orderField: "degree",
+          condition: searchVal,
+          orderType: this.data.topBarSelected === e.currentTarget.dataset.index ? firstOrderType : this.data.orderType[0],
+          ...this.data.activityType
+        });
+        orderField = "degree";
+        currentPage = 1;
+        break;
+      case 1:
+        commonStore.refechActivityList({
+          orderField: "update_time",
+          condition: searchVal,
+          orderType: this.data.topBarSelected === e.currentTarget.dataset.index ? secondOrderType : this.data.orderType[1],
+          ...this.data.activityType
+        });
+        orderField = "update_time";
+        currentPage = 1;
+        break;
+    }
+
+    this.setData({
+      topBarSelected: e.currentTarget.dataset.index
+    });
+  },
+
+  onFilterTap() {
+    wx.navigateTo({
+      url: "/pages/filter/filter",
+    })
+  },
+
+  onGoMore(e) {
+    commonStore.changeCurrentActivity(e.currentTarget.dataset.activity)
+    wx.navigateTo({
+      url: "/pages/more/more",
+    })
+  },
+
+  onGoVideo(e) {
+    commonStore.changeCurrentVideo({ id: e.currentTarget.dataset.activity.defaultVideoId })
+    wx.navigateTo({
+      url: "/pages/room/room",
+    })
+  },
+
+  async scrollToLower(e) {
+    if (this.data.activityListRes.canLoad) {
+      currentPage = currentPage + 1;
+      this.setData({
+        isLoading: true
+      });
+      await commonStore.refechActivityList({
+        orderField,
+        current: currentPage,
+        condition: searchVal
+      });
+      this.setData({
+        isLoading: false
+      });
+    }
+  },
+
+  onShareAppMessage() {
+    return {
+      title: getIn(this.data.activityListRes, ["0", "name"], ""),
+      path: \`/pages/index/index\`,
+      imageUrl: getIn(this.data.activityListRes, ["0", "videoBgImgSrc"], "")
+    }
+  },
+
+}))`,
+    },
+  },
+  {
+    name: "easyUI",
+    nature: "开源项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="yellow">
+          界面设计
+        </Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "一款简单易用的微信小程序组库，封装开发中常用的组件，提高开发效率，以及代码的可维护性。超越一行代码的极限，体验开箱即用开发方式。默认配置即可满足大部分需求，特殊情况可自定义相关属性来满足需求。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="grape">
+          axios
+        </Badge>
+      </Group>
+    ),
+    codeLink: "https://github.com/qq865738120/easyUI",
+    images: [
+      { width: 400, height: 400, thumb: "9-1.jpg" },
+      { width: 400, height: 400, thumb: "9-2.jpeg" },
+      { width: 400, height: 400, thumb: "9-3.jpeg" },
+    ],
+    code: {
+      language: "javascript",
+      text: `// component/senior/tabs/tabs.js
+const themes = {
+  smallBar: 'smallBar'
+}
+
+Component({
+  /**
+   * 组件的属性列表
+   */
+  properties: {
+    items: {
+      type: Array,
+      value: ['item1', 'item2', 'item3', 'item4'],
+      observer: function (newVal) {
+        if (newVal && newVal.length < 5) {
+          this.setData({
+            itemWidth: (750 / newVal.length) - 60
+          })
+        }
+      }
+    },
+    height: {
+      type: String,
+      value: '120'
+    },
+    textColor: {
+      type: String,
+      value: '#666666'
+    },
+    textSize: {
+      type: String,
+      value: '28'
+    },
+    selectColor: {
+      type: String,
+      value: '#FE9036'
+    },
+    selected: {
+      type: String,
+      value: '0',
+      observer: function (newVal) {
+        this.setData({
+          mSelected: newVal
+        })
+        this.onItemTap({ currentTarget: { dataset: { index: newVal } } })
+      }
+    },
+    theme: {
+      type: String,
+      value: 'default',
+      observer: function (newVal) {
+        if (this.data.theme == themes.smallBar) {
+          this.setData({
+            bottom: this.data.height / 2 - this.data.textSize - 8,
+            scrollStyle: ''
+          })
+        }
+      }
+    },
+    dataCus: {
+      type: Array,
+      value: '',
+      observer: function (newVal) {
+        this.setData({
+          mDataCus: newVal
+        });
+      }
+    }
+  },
+
+  /**
+   * 组件的初始数据
+   */
+  data: {
+    itemWidth: 128,
+    isScroll: true,
+    scrollStyle: 'border-bottom: 1px solid #e5e5e5;',
+    left: '0',
+    right: '750',
+    bottom: '0',
+    mSelected: '0',
+    lastIndex: 0,
+    transition: 'left 0.5s, right 0.2s',
+    windowWidth: 375,
+    domData: [],
+    textDomData: [],
+    mDataCus: []
+  },
+
+  externalClasses: ['cus'],
+
+  /**
+   * 组件的方法列表
+   */
+  methods: {
+    barLeft: function(index, dom) {
+      let that = this;
+      dom[index] && this.setData({
+        left: dom[index].left
+      })
+    },
+    barRight: function (index, dom) {
+      let that = this;
+      this.setData({
+        right: that.data.windowWidth - (dom[index] && dom[index].right),
+      })
+    },
+    onItemTap: function(e) {
+      const index = e.currentTarget.dataset.index;
+      let str = this.data.lastIndex < index ? 'left 0.5s, right 0.2s' : 'left 0.2s, right 0.5s';
+      this.setData({
+        transition: str,
+        lastIndex: index,
+        mSelected: index
+      })
+      if (this.data.theme == themes.smallBar) {
+        this.barLeft(index, this.data.textDomData);
+        this.barRight(index, this.data.textDomData);
+      } else {
+        this.barLeft(index, this.data.domData);
+        this.barRight(index, this.data.domData);
+      }
+      this.triggerEvent('itemtap', e, { bubbles: true });
+    }
+  },
+
+  lifetimes: {
+    ready: function () {
+      let that = this;
+      const sysInfo = wx.getSystemInfoSync();
+      this.setData({
+        windowWidth: sysInfo.screenWidth
+      })
+      const query = this.createSelectorQuery();
+      query.in(this).selectAll('.item').fields({
+        dataset: true,
+        rect: true,
+        size: true
+      }, function (res) {
+        that.setData({
+          domData: res,
+        })
+        that.barLeft(that.data.mSelected, that.data.domData);
+        that.barRight(that.data.mSelected, that.data.domData);
+      }).exec()
+      query.in(this).selectAll('.text').fields({
+        dataset: true,
+        rect: true,
+        size: true
+      }, function (res) {
+        that.setData({
+          textDomData: res,
+        })
+        if (that.data.theme == themes.smallBar) {
+          that.barLeft(that.data.mSelected, that.data.textDomData);
+          that.barRight(that.data.mSelected, that.data.textDomData);
+        }
+      }).exec()
+    },
+  },
+})`,
+    },
+  },
+  {
+    name: "react-neat",
+    nature: "开源项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "轻量级的状态管理库，采用react hook实现，不依赖任何三方库。同时还支持异步操作，非常适合在小型项目中使用。API设计理念参考了redux，容易上手。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="indigo">
+          React
+        </Badge>
+        <Badge variant="dot" color="yellow">
+          husky
+        </Badge>
+        <Badge variant="dot" color="blue">
+          TypeScript
+        </Badge>
+        <Badge variant="dot" color="orange">
+          Rollup
+        </Badge>
+        <Badge variant="dot" color="lime">
+          Babel
+        </Badge>
+        <Badge variant="dot" color="violet">
+          Jest
+        </Badge>
+        <Badge variant="dot" color="green">
+          eslint
+        </Badge>
+      </Group>
+    ),
+    codeLink: "https://github.com/qq865738120/react-neat",
+    images: [
+      { width: 400, height: 400, thumb: "10-1.png" },
+      { width: 400, height: 400, thumb: "10-2.png" },
+      { width: 400, height: 400, thumb: "10-3.png" },
+    ],
+    code: {
+      language: "typescript",
+      text: `import { createContext, useContext, useState } from "react";
+import * as React from "react";
+import Store from "./store";
+// import { Reducer } from "./type";
+import { ParamsException } from "./utils/exceptions";
+import { isPromise } from "./utils/baseUtil";
+
+const storeList: Store[] = [];
+
+/**
+ * Get store list.
+ */
+export const getStoreList = (): Store[] => {
+  return storeList;
+};
+
+/**
+ * Determines whether the specified store exists.
+ *
+ * @param storeName store name
+ */
+export const hasStore = (storeName: string): boolean => {
+  const storeObj: Store = storeList
+    .filter(item => item.getName() === storeName)
+    .pop();
+  return storeObj ? true : false;
+};
+
+/**
+ * Get the specified store.
+ * If the store does not exist, it will be created.
+ *
+ * @param storeName store name
+ * @param actions If the store has never been obtained, please pass in the reducer parameter.
+ */
+
+/**
+ * Get the specified store.
+ * If the store does not exist, it will be created.
+ *
+ * @export
+ * @template T - The action type you defined.
+ * @param {string} storeName - The store name, you can find the corresponding store through \`storeName\`
+ * @param {T} [actions] - The action object can provide multiple actions, and each action corresponds to an operation.
+ * @returns {Store} - The Store object
+ */
+export function getStore<T>(storeName: string, actions?: T): Store {
+  let storeObj: Store = storeList
+    .filter(item => item.getName() === storeName)
+    .pop();
+
+  if (storeObj) {
+    return storeObj;
+  }
+
+  if (!actions) {
+    throw new ParamsException(
+      "If the store has never been obtained, please pass in the reducer parameter."
+    );
+  }
+
+  const context = createContext(null);
+  storeObj = new Store(storeName, actions, context);
+  storeList.push(storeObj);
+  return storeObj;
+}
+
+/**
+ * The store reducer interface.
+ *
+ * @interface StoreReducer
+ * @template T - The action type you defined.
+ * @template U - The state type you defined.
+ */
+export interface StoreReducer<T, U> {
+  state: U;
+  actions: T;
+}
+
+/**
+ * Use the store hook.
+ *
+ * @export
+ * @template T
+ * @template U
+ * @param {Store} store - The store instance you want to use.
+ * @param {*} initialState - Initial state.
+ * @returns {StoreReducer<T, U>} - \`StoreReducer\` is an interface that provides \`state\` and \`actions\` to operate \`state\`.
+ */
+export default function useStore<T, U>(
+  store: Store,
+  initialState
+): StoreReducer<T, U> {
+  // const value = useReducer(store.getActions(), initialState, initializer);
+  // return value;
+  const actions = {} as T;
+  console.log("store.getReducer()", store.getActions());
+  const [state, setState] = useState(initialState);
+  Object.keys(store.getActions()).forEach(name => {
+    actions[name] = (arg): any => {
+      const res = store.getActions()[name].call(this, state, arg);
+      if (isPromise(res)) {
+        Promise.resolve(res).then(ret => {
+          setState({ ...state, ...ret });
+        });
+      } else {
+        setState({ ...state, ...res });
+      }
+    };
+  });
+  return { state, actions };
+}
+
+interface ProviderProps<T, U> {
+  store: Store;
+  value: StoreReducer<T, U>;
+  children: React.ReactNode[] | React.ReactNode;
+}
+
+/**
+ * Store Provider component.
+ * This component will distribute the state in the store to its children.
+ * If you need to use multiple stores at the same time, you should use \`Providers\`.
+ *
+ * @export
+ * @template T - The action type you defined.
+ * @template U - The state type you defined.
+ * @param {ProviderProps<T, U>} props - React component props.
+ * @returns {React.FunctionComponentElement<React.ProviderProps<ProvidersProps<T, U>>>}
+ */
+export function Provider<T, U>(
+  props: ProviderProps<T, U>
+): React.FunctionComponentElement<React.ProviderProps<ProvidersProps<T, U>>> {
+  const { store, value, children } = props;
+  const childrenArr = Array.isArray(children) ? children : [children];
+  return React.createElement(
+    store.getContext().Provider,
+    { value },
+    ...childrenArr
+  );
+}
+
+interface ProvidersProps<T, U> {
+  stores: Store[];
+  values: StoreReducer<T, U>[];
+  children: React.ReactNode[] | React.ReactNode;
+}
+
+/**
+ * Store Provider component.
+ * This component will distribute the state in the store to its children.
+ *
+ * @export
+ * @template T - The action type you defined.
+ * @template U - The state type you defined.
+ * @param {ProvidersProps<T, U>} props - React component props.
+ * @returns {React.FunctionComponentElement<React.ProviderProps<ProvidersProps<T, U>>>}
+ */
+export function Providers<T, U>(
+  props: ProvidersProps<T, U>
+): React.FunctionComponentElement<React.ProviderProps<ProvidersProps<T, U>>> {
+  const { stores, values, children } = props;
+  const childrenArr = Array.isArray(children) ? children : [children];
+  if (stores.length !== values.length) {
+    throw new ParamsException("Stores and values must correspond one by one.");
+  }
+
+  const queue = [];
+
+  stores.map((item, index) => {
+    if (index === 0) {
+      queue.push(
+        React.createElement(
+          item.getContext().Provider,
+          { value: values[index] },
+          ...childrenArr
+        )
+      );
+    } else {
+      queue.push(
+        React.createElement(
+          item.getContext().Provider,
+          { value: values[index] },
+          queue.pop()
+        )
+      );
+    }
+  });
+  return queue.pop();
+}
+
+/**
+ * Use context to get the state provided in the store.
+ * \`useContext\` is the encapsulation method of \`useStoreContext\`.
+ * The provider must be injected into the global component before use.
+ *
+ * @export
+ * @template T - The action type you defined.
+ * @template U - The state type you defined.
+ * @param {Store} store - Pass in the store whose context you want to use
+ * @returns {StoreReducer<T, U>} - \`StoreReducer\` is an interface that provides \`state\` and \`actions\` to operate \`state\`.
+ */
+export function useStoreContext<T, U>(store: Store): StoreReducer<T, U> {
+  return useContext(store.getContext());
+}`,
+    },
+  },
+  {
+    name: "背景国际音乐节门户网站",
+    nature: "商业项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "背景国际音乐节艺术基金会门户网站，用于展示各类音乐资讯文章，以及演出购票入口。主要包括客户网站以及后台管理两个子项目，均采用Vue以及Nuxt框架搭建。客户网站部分采用ssr方式渲染，后台管理系统则采用spa方式。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="teal">
+          Vue
+        </Badge>
+        <Badge variant="dot" color="lime">
+          Nuxt
+        </Badge>
+        <Badge variant="dot" color="blue">
+          TypeScript
+        </Badge>
+        <Badge variant="dot" color="blue">
+          element-ui
+        </Badge>
+        <Badge variant="dot" color="pink">
+          Sass
+        </Badge>
+        <Badge variant="dot" color="green">
+          eslint
+        </Badge>
+        <Badge variant="dot" color="dark">
+          i18n
+        </Badge>
+      </Group>
+    ),
+    images: [
+      { width: 400, height: 400, thumb: "11-1.png" },
+      { width: 400, height: 400, thumb: "11-2.png" },
+      { width: 400, height: 400, thumb: "11-3.png" },
+    ],
+    code: {
+      language: "tsx",
+      text: `<i18n lang="yaml">
+zh:
+  search: "搜索感兴趣的内容"
+  news: "新闻资讯"
+  more: "查看更多"
+en:
+  search: "Search for content of interest"
+  news: "News"
+  more: "View More"
+</i18n>
+
+<template>
+  <section class="index-page">
+    <section class="search-box">
+      <img src="@/assets/search.png" />
+      <input v-model="searchValue" type="text" :placeholder="$t('search')" @keyup="onInputKeyUp" />
+    </section>
+
+    <video ref="video" class="part-1" autoplay loop muted>
+      <source
+        src="http://bmffile.kuke.com/fundwebsite/th24-bmf-fund.mp4"
+        type="video/mp4"
+      />
+    </video>
+
+    <section class="part-2">
+      <section class="title">
+        <div class="text">NEWS INFORMATION</div>
+        <div class="line-warp">
+          <div class="line"></div>
+          <img src="@/assets/triangle.png" />
+          <div class="line"></div>
+        </div>
+        <div class="text-bg">{{ $t('news') }}</div>
+      </section>
+
+      <section class="top">
+        <div v-for="item in list.slice(0, 3)" :key="item.id" class="item">
+          <div class="img">
+            <img :src="item.cover_img" />
+          </div>
+          <p class="title">{{ item.news_name }}</p>
+        </div>
+      </section>
+
+      <section class="center">
+        <NeswItem v-for="item in list.slice(3)" :key="item.id" :detail="item" />
+      </section>
+
+      <section class="bottom" @click="onMoreClick">{{ $t('more') }}</section>
+    </section>
+  </section>
+</template>
+
+<script lang="ts">
+import Vue from 'vue'
+import NeswItem from '@/components/NewsItem.vue'
+import { getPath } from '~/utils'
+export default Vue.extend({
+  components: {
+    NeswItem,
+  },
+  layout: 'page',
+  async asyncData(context) {
+    const res = await context.$axios.$get('/V1/news/list', {
+      params: {
+        page: 1,
+        pageSize: 12,
+      },
+    })
+    if (res.ret === 0) {
+      return { list: res.data.data }
+    }
+  },
+  data() {
+    return {
+      list: [] as any[],
+      searchValue: ''
+    }
+  },
+  mounted() {
+  },
+  methods: {
+    async _fetchNewsList() {
+      const res = await this.$axios.$get('/V1/news/list', {
+        params: {
+          page: 1,
+          pageSize: 12,
+        },
+      })
+      console.log('_fetchDelete', res)
+      if (res.ret === 0) {
+        this.list = res.data.data
+      }
+    },
+    onMoreClick() {
+        this.$router.push(getPath(this.$store.state.app.lang, '/news-list'))
+    },
+    onInputKeyUp(event: any) {
+      if (event.key === 'Enter') {
+        this.$router.push({
+          path: getPath(this.$store.state.app.lang, '/search'),
+          query: {
+            word: this.searchValue
+          },
+        })
+      }
+    }
+  },
+})
+</script>
+
+<style lang="scss" scoped>
+@import '@/styles/mixin.scss';
+.index-page {
+  position: relative;
+  .search-box {
+    display: flex;
+    align-items: center;
+    background: rgba(245, 245, 245, 0.2);
+    border-radius: 8px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    padding: 14px 24px;
+    position: absolute;
+    top: 100px;
+    right: 200px;
+    cursor: pointer;
+    z-index: 10;
+    > img {
+      width: 20px;
+      margin-right: 16px;
+    }
+    input {
+      color: white;
+      font-size: 16px;
+    }
+    input::placeholder {
+      color: white;
+    }
+  }
+  .part-1 {
+    width: 100vw;
+  }
+  .part-2 {
+    position: relative;
+    width: 1200px;
+    padding: 60px 0;
+    margin: 0 auto;
+    > .title {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      flex-direction: column;
+      position: relative;
+      .text {
+        font-size: 50px;
+        font-weight: 500;
+        color: #e0e0e0;
+      }
+      .line-warp {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        margin-top: 36px;
+        .line {
+          width: 150px;
+          height: 2px;
+          background: #af2127;
+        }
+        img {
+          width: 22px;
+          height: 19px;
+          margin: 0 30px;
+        }
+      }
+      .text-bg {
+        position: absolute;
+        top: 20px;
+        left: 0;
+        right: 0;
+        text-align: center;
+        font-size: 40px;
+        font-weight: 600;
+        color: #000000;
+      }
+    }
+    > .top {
+      background-image: url('@/assets/banner-1.png');
+      background-size: 100% 300px;
+      background-repeat: no-repeat;
+      margin-top: 60px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: space-between;
+      padding: 100px 51px 0;
+      .item {
+        cursor: pointer;
+        > .img {
+          width: 331px;
+          height: 248px;
+          overflow: hidden;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          background-color: white;
+          zoom: 1;
+          img {
+            height: 100%;
+            object-fit: cover;
+            transform: scale(1) translateZ(0);
+            transition: transform 0.75s;
+          }
+        }
+        .title {
+          font-size: 20px;
+          font-weight: 400;
+          color: #333333;
+          margin-top: 16px;
+          line-height: 28px;
+          width: 331px;
+          @include text-line(2);
+        }
+      }
+      .item:nth-child(2) {
+        > .img {
+          width: 381px;
+          height: 285px;
+        }
+        .title {
+          width: 381px;
+        }
+      }
+      .item:hover {
+        > .img {
+          img {
+            transform: scale(1.07) translateZ(0);
+            transition: transform 0.75s cubic-bezier(0, 1, 0.75, 1);
+          }
+        }
+      }
+    }
+    > .center {
+      display: flex;
+      justify-content: flex-start;
+      flex-wrap: wrap;
+    }
+    > .bottom {
+      width: 381px;
+      height: 60px;
+      background: #ffffff;
+      border: 1px solid #e0dfdf;
+      margin: 0 auto;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 20px;
+      color: #9c9c9c;
+      font-weight: 400;
+      margin-top: 60px;
+      cursor: pointer;
+    }
+    > .bottom:hover {
+      border-color: #af2127;
+      color: #af2127;
+    }
+  }
+}
+</style>`,
+    },
+  },
+  {
+    name: "webpack-del-file-plugin",
+    nature: "开源项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+      </Group>
+    ),
+    detail: "webpack的插件，用来删除一些构建后的文件，例如sourceMap文件。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="orange">
+          Webpack
+        </Badge>
+        <Badge variant="dot" color="lime">
+          Babel
+        </Badge>
+        <Badge variant="dot">NodeJs</Badge>
+        <Badge variant="dot" color="violet">
+          jest
+        </Badge>
+        <Badge variant="dot" color="green">
+          eslint
+        </Badge>
+      </Group>
+    ),
+    images: [
+      { width: 400, height: 400, thumb: "12-1.png" },
+      { width: 400, height: 400, thumb: "12-2.png" },
+      { width: 400, height: 400, thumb: "12-3.png" },
+    ],
+    code: {
+      language: "javascript",
+      text: `import fs from 'fs'
+import path from 'path'
+
+const PLUGIN_NAME = 'WebpackDelFilePlugin'
+const DEFAULT_DELETE_REGEX = /\.map$/
+
+module.exports = class SentryPlugin {
+  constructor(options) {
+    this.deleteRegex = options.deleteRegex || DEFAULT_DELETE_REGEX
+  }
+
+  apply(compiler) {
+    compiler.hooks.done.tapPromise(PLUGIN_NAME, async (stats) => {
+      await this.deleteFiles(stats)
+    })
+  }
+
+  // eslint-disable-next-line class-methods-use-this
+  getAssetPath(compilation, name) {
+    return path.join(
+      compilation.getPath(compilation.compiler.outputPath),
+      name.split('?')[0]
+    )
+  }
+
+  async deleteFiles(stats) {
+    Object.keys(stats.compilation.assets)
+      .filter(name => this.deleteRegex.test(name))
+      .forEach((name) => {
+        const filePath = this.getAssetPath(stats.compilation, name)
+        if (filePath) {
+          fs.unlinkSync(filePath)
+        }
+        else {
+          // eslint-disable-next-line no-console
+          console.warn(
+            \`\${PLUGIN_NAME}: unable to delete '\${name}'. \` +
+              'File does not exist; it may not have been created ' +
+              'due to a build error.'
+          )
+        }
+      })
+  }
+}`,
+    },
+  },
+  {
+    name: "personal-page",
+    nature: "开源项目",
+    duty: (
+      <Group>
+        <Badge variant="outline">前端开发</Badge>
+        <Badge variant="outline" color="yellow">
+          界面设计
+        </Badge>
+        <Badge variant="outline" color="red">
+          架构设计
+        </Badge>
+      </Group>
+    ),
+    detail:
+      "个人首页。没错，你现在看到的就是本项目。该项目包括前后端两个子项目，前端是Gatsby框架搭建，后端则是NestJS框架搭建，数据库则用的是PostgreSQL（用了一次就再也离不开的数据库）。",
+    technologies: (
+      <Group>
+        <Badge variant="dot" color="grape">
+          Gatsby
+        </Badge>
+        <Badge variant="dot" color="indigo">
+          React
+        </Badge>
+        <Badge variant="dot" color="blue">
+          TypeScript
+        </Badge>
+        <Badge variant="dot" color="pink">
+          Mantain
+        </Badge>
+        <Badge variant="dot" color="red">
+          NestJS
+        </Badge>
+        <Badge variant="dot" color="violet">
+          fastify
+        </Badge>
+        <Badge variant="dot" color="cyan">
+          PostgreSQL
+        </Badge>
+      </Group>
+    ),
+    images: [
+      { width: 400, height: 400, thumb: "12-1.png" },
+      { width: 400, height: 400, thumb: "12-2.png" },
+      { width: 400, height: 400, thumb: "12-3.png" },
+    ],
+    code: {
+      language: "javascript",
+      text: ``,
+    },
+  },
 ];
 
 export const skillList = {
@@ -1463,24 +2592,246 @@ export const skillList = {
   color: "#000",
   children: [
     {
-      name: "qian，duan",
+      name: "前端",
       children: [
         {
           name: "react",
-          loc: 0.9,
+          loc: 0.95,
         },
         {
           name: "vue",
           loc: 0.8,
         },
+        {
+          name: "Taro",
+          loc: 0.95,
+        },
+        {
+          name: "微信小程序",
+          loc: 0.9,
+        },
+        {
+          name: "HTML5",
+          loc: 0.9,
+        },
+        {
+          name: "CSS3",
+          loc: 0.9,
+        },
+        {
+          name: "Canvas",
+          loc: 0.7,
+        },
+        {
+          name: "TypeScript",
+          loc: 0.9,
+        },
+        {
+          name: "JavaScript",
+          loc: 0.9,
+        },
+        {
+          name: "Ant Design",
+          loc: 0.9,
+        },
+        {
+          name: "Element UI",
+          loc: 0.9,
+        },
+        {
+          name: "Mantine",
+          loc: 0.8,
+        },
+        {
+          name: "Vux",
+          loc: 0.8,
+        },
+        {
+          name: "Mobx",
+          loc: 0.8,
+        },
+        {
+          name: "Redux",
+          loc: 0.8,
+        },
+        {
+          name: "Next",
+          loc: 0.75,
+        },
+        {
+          name: "Nuxt",
+          loc: 0.8,
+        },
+        {
+          name: "Umi",
+          loc: 0.75,
+        },
+        {
+          name: "Echarts",
+          loc: 0.9,
+        },
+        {
+          name: "Echarts",
+          loc: 0.9,
+        },
+        {
+          name: "nivo",
+          loc: 0.7,
+        },
+        {
+          name: "Three.js",
+          loc: 0.5,
+        },
       ],
     },
     {
-      name: "kuapingtai",
+      name: "跨平台",
       children: [
         {
-          name: "flutter",
-          loc: 0.5,
+          name: "React Native",
+          loc: 0.7,
+        },
+        {
+          name: "Flutter",
+          loc: 0.6,
+        },
+        {
+          name: "Dart",
+          loc: 0.6,
+        },
+        {
+          name: "Electron",
+          loc: 0.7,
+        },
+      ],
+    },
+    {
+      name: "后端",
+      children: [
+        {
+          name: "NodeJS",
+          loc: 0.8,
+        },
+        {
+          name: "Express",
+          loc: 0.8,
+        },
+        {
+          name: "Koajs",
+          loc: 0.8,
+        },
+        {
+          name: "Fastify",
+          loc: 0.8,
+        },
+        {
+          name: "Egg",
+          loc: 0.7,
+        },
+        {
+          name: "NestJS",
+          loc: 0.7,
+        },
+        {
+          name: "Java",
+          loc: 0.8,
+        },
+        {
+          name: "Spring Boot",
+          loc: 0.6,
+        },
+        {
+          name: "Tomcat",
+          loc: 0.6,
+        },
+        {
+          name: "Nginx",
+          loc: 0.6,
+        },
+        {
+          name: "Mysql",
+          loc: 0.7,
+        },
+        {
+          name: "SQL Server",
+          loc: 0.6,
+        },
+        {
+          name: "PostgreSQL",
+          loc: 0.6,
+        },
+        {
+          name: "Mongodb",
+          loc: 0.6,
+        },
+        {
+          name: "Redis",
+          loc: 0.7,
+        },
+      ],
+    },
+    {
+      name: "工具集",
+      children: [
+        {
+          name: "Webpack",
+          loc: 0.9,
+        },
+        {
+          name: "Rollup",
+          loc: 0.8,
+        },
+        {
+          name: "Maven",
+          loc: 0.6,
+        },
+        {
+          name: "Gradle",
+          loc: 0.6,
+        },
+        {
+          name: "Npm",
+          loc: 0.9,
+        },
+        {
+          name: "Yarn",
+          loc: 0.9,
+        },
+        {
+          name: "ESLint",
+          loc: 0.9,
+        },
+        {
+          name: "Puppeteer",
+          loc: 0.8,
+        },
+        {
+          name: "Jest",
+          loc: 0.8,
+        },
+        {
+          name: "Junit",
+          loc: 0.8,
+        },
+        {
+          name: "Git",
+          loc: 0.8,
+        },
+        {
+          name: "PM2",
+          loc: 0.9,
+        },
+        {
+          name: "CentOS",
+          loc: 0.9,
+        },
+        {
+          name: "Debian",
+          loc: 0.9,
+        },
+        {
+          name: "Docker",
+          loc: 0.6,
         },
       ],
     },
