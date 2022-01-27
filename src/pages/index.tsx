@@ -67,7 +67,7 @@ const IndexPage = () => {
                 idleTimeLimit: 1,
                 theme: "solarized-light",
                 cols: isPhone ? 47 : 90,
-                rows: isPhone ? 24 : 32,
+                rows: isPhone ? 24 : 42,
               }
             )
           );
@@ -91,7 +91,6 @@ const IndexPage = () => {
       if (res.data) {
         notifications.showNotification({
           title: "通知",
-          autoClose: false,
           message: `欢迎访问我的个人主页，您是第${res.data.data}位访客！`,
         });
       } else {
@@ -123,7 +122,7 @@ const IndexPage = () => {
 
   const onMenuClick = React.useCallback(() => {
     setIsOpenMenu(!isOpenMenu);
-  }, []);
+  }, [isOpenMenu]);
 
   const onNavigationClick = React.useCallback((index) => {
     console.log("index", index);
@@ -156,7 +155,7 @@ const IndexPage = () => {
           onClick={onMenuClick}
         />
         <div className="left">
-          <img src={""} />
+          <img src="../../icon.webp" />
           <span>CODE_XIA</span>
         </div>
         <div className="center center-pc">
@@ -188,11 +187,11 @@ const IndexPage = () => {
 
       <section className="part-1" ref={scrollIntoView1.targetRef}>
         <div className="top">
-          <img src="" />
+          <img src="../../head.png" />
           <p className="title">郑文军</p>
           <p className="desc">前端开发工程师</p>
         </div>
-        <Highlight className="content" highlight={["5年", "架构", "质量"]}>
+        <Highlight className="content" highlight={["5年"]}>
           具有5年前端开发经验，熟练使用React、Vue、小程序等前端框架。熟悉nodejs、Java等后端开发。对跨平台开发（RN、flutter、Taro）技术以及Android原生开发有一定的了解。具备前端项目架构能力，能够熟练使用Webpack、Rollup、Babel等前端工具链，能够不断解决疑难杂症，持续优化项目架构。关注最新技术热点，从而提不断升产品质量以及用户体验。
         </Highlight>
         <div className="center">
@@ -347,6 +346,7 @@ const IndexPage = () => {
                         component="a"
                         href={item.codeLink}
                         size="lg"
+                        style={isPhone ? { wordBreak: "break-all" } : {}}
                       >
                         {item.codeLink}
                       </Text>
@@ -426,7 +426,7 @@ const IndexPage = () => {
             </div>
           </div>
           <div className="box-3" ref={scrollIntoView6.targetRef as any}>
-            <h3>rongyuchengjiu</h3>
+            <h3>荣誉</h3>
             <SimpleGrid className="content" cols={2} spacing="lg">
               <div className="right">
                 <Image
@@ -436,10 +436,15 @@ const IndexPage = () => {
                 />
               </div>
               <div className="left">
-                <Title order={4}>lanqiaobei</Title>
-                <Highlight highlight="this">
-                  Highlight This, definitely THIS and also this!
-                </Highlight>
+                <Title order={4}>蓝桥杯个人算法大赛</Title>
+                <div style={{ marginTop: '16px' }}>
+                  <Text>
+                    蓝桥杯全国软件和信息技术专业人才大赛，是由工业和信息化部人才交流中心举办的全国性IT学科赛事。共有北京大学、清华大学、上海交通大学等全国1200余所高校参赛，累计参赛人数超过40万人。
+                  </Text>
+                  <Text>
+                    2020年，蓝桥杯大赛被列入中国高等教育学会发布的“全国普通高校学科竞赛排行榜”，是高校教育教学改革和创新人才培养的重要竞赛项目。
+                  </Text>
+                </div>
               </div>
             </SimpleGrid>
           </div>

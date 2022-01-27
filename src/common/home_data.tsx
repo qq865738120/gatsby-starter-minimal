@@ -71,7 +71,7 @@ export const companyList = [
         detail: (
           <Highlight
             className="content"
-            highlight={["17年", "900余人", "医药流通行业"]}
+            highlight=""
           >
             上海海典软件股份有限公司创建于2004年，专注医药流通行业17年，员工人数达900余人。公司总部位于上海，分别在⻓沙、沈阳、厦门、重庆、西安、济南设立6家分公司，在长沙投资2家子公司。公司以“科技赋能健康产业”为使命，致力于为用户提供专业的医药流通行业信息化解决方案及数字化转型服务
           </Highlight>
@@ -116,7 +116,7 @@ export const companyList = [
         detail: (
           <Highlight
             className="content"
-            highlight={["数据服务商", "13+", "医药流通行业"]}
+            highlight=""
           >
             湖南福米信息科技有限责任公司是一家全球可靠的数据服务商，服务涵盖信息、辅助交易。
             旗下系列产品覆盖13+个国家/地区、3大品类、29个交易所、100000+个投资标的，
@@ -2486,6 +2486,7 @@ export default Vue.extend({
       { width: 400, height: 400, thumb: "12-2.png" },
       { width: 400, height: 400, thumb: "12-3.png" },
     ],
+    codeLink: "https://github.com/qq865738120/webpack-del-file-plugin",
     code: {
       language: "javascript",
       text: `import fs from 'fs'
@@ -2580,6 +2581,7 @@ module.exports = class SentryPlugin {
       { width: 400, height: 400, thumb: "12-2.png" },
       { width: 400, height: 400, thumb: "12-3.png" },
     ],
+    codeLink: "https://github.com/qq865738120/personal-page-new",
     code: {
       language: "javascript",
       text: ``,
