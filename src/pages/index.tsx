@@ -1,7 +1,5 @@
 import * as React from "react";
 import "./home.scss";
-// import backgroundLightImg from "../images/background_light.png";
-// import backgroundDarkImg from "../images/background_dark.png";
 import Bg1 from "../images/bg-1.svg";
 import Bg2 from "../images/bg-2.svg";
 import { useSelector } from "react-redux";
@@ -139,10 +137,10 @@ const IndexPage = () => {
         scrollIntoView6,
       ][index - 1].scrollIntoView();
     }
+    setIsOpenMenu(false)
   }, []);
 
   const onImageClick = React.useCallback((item) => {
-    console.log("aaaaaa");
     setImagePreview(item);
     setIsOpenImagePreview(true);
   }, []);
@@ -346,7 +344,7 @@ const IndexPage = () => {
                         component="a"
                         href={item.codeLink}
                         size="lg"
-                        style={isPhone ? { wordBreak: "break-all" } : {}}
+                        style={isPhone ? { wordBreak: "break-all", maxWidth: '270px' } : {}}
                       >
                         {item.codeLink}
                       </Text>
@@ -454,10 +452,10 @@ const IndexPage = () => {
       <Modal
         opened={isOpenImagePreview}
         onClose={() => setIsOpenImagePreview(false)}
-        size={imagePreview.width + 40}
+        size={isPhone ? 340 : (imagePreview.width + 40)}
         title="图片预览"
       >
-        <Image width={imagePreview.width} src={"../../" + imagePreview.thumb} />
+        <Image width={isPhone ? 300 : imagePreview.width} src={"../../" + imagePreview.thumb} />
       </Modal>
     </main>
   );
