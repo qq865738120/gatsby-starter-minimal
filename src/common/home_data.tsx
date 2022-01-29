@@ -2291,162 +2291,7 @@ export default Vue.extend({
 })
 </script>
 
-<style lang="scss" scoped>
-@import '@/styles/mixin.scss';
-.index-page {
-  position: relative;
-  .search-box {
-    display: flex;
-    align-items: center;
-    background: rgba(245, 245, 245, 0.2);
-    border-radius: 8px;
-    border: 1px solid rgba(255, 255, 255, 0.5);
-    padding: 14px 24px;
-    position: absolute;
-    top: 100px;
-    right: 200px;
-    cursor: pointer;
-    z-index: 10;
-    > img {
-      width: 20px;
-      margin-right: 16px;
-    }
-    input {
-      color: white;
-      font-size: 16px;
-    }
-    input::placeholder {
-      color: white;
-    }
-  }
-  .part-1 {
-    width: 100vw;
-  }
-  .part-2 {
-    position: relative;
-    width: 1200px;
-    padding: 60px 0;
-    margin: 0 auto;
-    > .title {
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      flex-direction: column;
-      position: relative;
-      .text {
-        font-size: 50px;
-        font-weight: 500;
-        color: #e0e0e0;
-      }
-      .line-warp {
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        margin-top: 36px;
-        .line {
-          width: 150px;
-          height: 2px;
-          background: #af2127;
-        }
-        img {
-          width: 22px;
-          height: 19px;
-          margin: 0 30px;
-        }
-      }
-      .text-bg {
-        position: absolute;
-        top: 20px;
-        left: 0;
-        right: 0;
-        text-align: center;
-        font-size: 40px;
-        font-weight: 600;
-        color: #000000;
-      }
-    }
-    > .top {
-      background-image: url('@/assets/banner-1.png');
-      background-size: 100% 300px;
-      background-repeat: no-repeat;
-      margin-top: 60px;
-      display: flex;
-      align-items: flex-end;
-      justify-content: space-between;
-      padding: 100px 51px 0;
-      .item {
-        cursor: pointer;
-        > .img {
-          width: 331px;
-          height: 248px;
-          overflow: hidden;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-          background-color: white;
-          zoom: 1;
-          img {
-            height: 100%;
-            object-fit: cover;
-            transform: scale(1) translateZ(0);
-            transition: transform 0.75s;
-          }
-        }
-        .title {
-          font-size: 20px;
-          font-weight: 400;
-          color: #333333;
-          margin-top: 16px;
-          line-height: 28px;
-          width: 331px;
-          @include text-line(2);
-        }
-      }
-      .item:nth-child(2) {
-        > .img {
-          width: 381px;
-          height: 285px;
-        }
-        .title {
-          width: 381px;
-        }
-      }
-      .item:hover {
-        > .img {
-          img {
-            transform: scale(1.07) translateZ(0);
-            transition: transform 0.75s cubic-bezier(0, 1, 0.75, 1);
-          }
-        }
-      }
-    }
-    > .center {
-      display: flex;
-      justify-content: flex-start;
-      flex-wrap: wrap;
-    }
-    > .bottom {
-      width: 381px;
-      height: 60px;
-      background: #ffffff;
-      border: 1px solid #e0dfdf;
-      margin: 0 auto;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      font-size: 20px;
-      color: #9c9c9c;
-      font-weight: 400;
-      margin-top: 60px;
-      cursor: pointer;
-    }
-    > .bottom:hover {
-      border-color: #af2127;
-      color: #af2127;
-    }
-  }
-}
-</style>`,
+`,
     },
   },
   {
@@ -2571,9 +2416,9 @@ module.exports = class SentryPlugin {
       </Group>
     ),
     images: [
-      { width: 400, height: 400, thumb: "13-1.png" },
-      { width: 400, height: 400, thumb: "13-2.png" },
-      { width: 400, height: 400, thumb: "13-3.png" },
+      { width: 400, height: 400, thumb: "13-1.webp" },
+      { width: 400, height: 400, thumb: "13-2.webp" },
+      { width: 400, height: 400, thumb: "13-3.webp" },
     ],
     codeLink: "https://github.com/qq865738120/personal-page-new",
     code: {

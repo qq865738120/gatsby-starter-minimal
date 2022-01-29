@@ -263,7 +263,7 @@ const IndexPage = () => {
               </div>
               <div className="right">
                 <Image
-                  src={"../../school.jpeg"}
+                  src={"../../school.webp"}
                   height={450}
                   width={700}
                   alt="Norway"
@@ -346,7 +346,7 @@ const IndexPage = () => {
                         size="lg"
                         style={isPhone ? { wordBreak: "break-all", maxWidth: '270px' } : {}}
                       >
-                        {item.codeLink}
+                        点击进入
                       </Text>
                     </div>
                   )}
