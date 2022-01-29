@@ -185,7 +185,7 @@ const IndexPage = () => {
 
       <section className="part-1" ref={scrollIntoView1.targetRef}>
         <div className="top">
-          <img src="../../head.png" />
+          <img src="../../head.webp" />
           <p className="title">郑文军</p>
           <p className="desc">前端开发工程师</p>
         </div>

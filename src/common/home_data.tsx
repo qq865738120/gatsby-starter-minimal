@@ -57,7 +57,7 @@ export const infoList = [
 
 export const companyList = [
   {
-    image: "",
+    image: "../../hydee.webp",
     name: "上海海典软件股份有限公司",
     infos: [
       {
@@ -69,10 +69,7 @@ export const companyList = [
         name: "简介",
         icon: "icon-detail",
         detail: (
-          <Highlight
-            className="content"
-            highlight=""
-          >
+          <Highlight className="content" highlight="">
             上海海典软件股份有限公司创建于2004年，专注医药流通行业17年，员工人数达900余人。公司总部位于上海，分别在⻓沙、沈阳、厦门、重庆、西安、济南设立6家分公司，在长沙投资2家子公司。公司以“科技赋能健康产业”为使命，致力于为用户提供专业的医药流通行业信息化解决方案及数字化转型服务
           </Highlight>
         ),
@@ -88,13 +85,13 @@ export const companyList = [
         detail: (
           <List>
             <List.Item>
-              负责C端微商城项目开发工作。包括日常版本迭代、新功能开发、历史代码重构等内容
+              负责运营活动页面（pc/mobile）开发，主要使用React相关技术栈，TypeScript进行开发。
             </List.Item>
             <List.Item>
-              负责C端微商城项目架构以及优化工作。包括解决项目历史遗留问题、优化小程序打包后文件体积、提升构建打包速度、流程自动化进而提升开发体验、日志埋点线上bug诊断等内容。
+              负责运营人员内部后台管理系统开发以及维护工作，为内部人员提供高效的处理工单、活动配置的能力。主要使用了React、Antd作为主要UI框架。
             </List.Item>
             <List.Item>
-              负责B端商户平台项目的开发工作。包括日常版本迭代、新更能开发等内容
+              负责公司官方网站的开发以及维护工作，并参与SEO的优化，图表渲染优化等任务。
             </List.Item>
           </List>
         ),
@@ -102,7 +99,7 @@ export const companyList = [
     ],
   },
   {
-    image: "",
+    image: "../../webull.webp",
     name: "湖南福米信息科技有限责任公司",
     infos: [
       {
@@ -114,10 +111,7 @@ export const companyList = [
         name: "简介",
         icon: "icon-detail",
         detail: (
-          <Highlight
-            className="content"
-            highlight=""
-          >
+          <Highlight className="content" highlight="">
             湖南福米信息科技有限责任公司是一家全球可靠的数据服务商，服务涵盖信息、辅助交易。
             旗下系列产品覆盖13+个国家/地区、3大品类、29个交易所、100000+个投资标的，
             全球多地部署有数据中心，为用户提供极速数据和交易服务，完整呈现市场细节。
@@ -220,9 +214,9 @@ export const projectList = [
     ),
     codeLink: "",
     images: [
-      { width: 400, height: 400, thumb: "1-1.jpeg" },
-      { width: 400, height: 400, thumb: "1-2.jpeg" },
-      { width: 400, height: 400, thumb: "1-3.jpeg" },
+      { width: 400, height: 400, thumb: "1-1.webp" },
+      { width: 400, height: 400, thumb: "1-2.webp" },
+      { width: 400, height: 400, thumb: "1-3.webp" },
     ],
     code: {
       language: "tsx",
@@ -717,9 +711,9 @@ export default RunView`,
       </Group>
     ),
     images: [
-      { width: 400, height: 400, thumb: "3-1.jpg" },
-      { width: 800, height: 400, thumb: "3-2.png" },
-      { width: 400, height: 400, thumb: "3-3.jpeg" },
+      { width: 400, height: 400, thumb: "3-1.webp" },
+      { width: 800, height: 400, thumb: "3-2.webp" },
+      { width: 400, height: 400, thumb: "3-3.webp" },
     ],
     code: {
       language: "tsx",
@@ -1342,9 +1336,9 @@ export default compress;`,
     ),
     codeLink: "",
     images: [
-      { width: 400, height: 400, thumb: "6-1.png" },
-      { width: 400, height: 400, thumb: "6-2.png" },
-      { width: 400, height: 400, thumb: "6-3.png" },
+      { width: 400, height: 400, thumb: "6-1.webp" },
+      { width: 400, height: 400, thumb: "6-2.webp" },
+      { width: 400, height: 400, thumb: "6-3.webp" },
     ],
     code: {
       language: "js",
@@ -1447,9 +1441,9 @@ return {
     ),
     codeLink: "https://github.com/qq865738120/home-page",
     images: [
-      { width: 400, height: 400, thumb: "7-1.png" },
-      { width: 400, height: 400, thumb: "7-2.png" },
-      { width: 400, height: 400, thumb: "7-3.png" },
+      { width: 400, height: 400, thumb: "7-1.webp" },
+      { width: 400, height: 400, thumb: "7-2.webp" },
+      { width: 400, height: 400, thumb: "7-3.webp" },
     ],
     code: {
       language: "tsx",
@@ -1521,9 +1515,9 @@ export default IndexPage;`,
       </Group>
     ),
     images: [
-      { width: 400, height: 400, thumb: "8-1.jpeg" },
-      { width: 400, height: 400, thumb: "8-2.jpeg" },
-      { width: 400, height: 400, thumb: "8-3.jpeg" },
+      { width: 400, height: 400, thumb: "8-1.webp" },
+      { width: 400, height: 400, thumb: "8-2.webp" },
+      { width: 400, height: 400, thumb: "8-3.webp" },
     ],
     code: {
       language: "javascript",
@@ -1718,9 +1712,9 @@ Page(connect({
     ),
     codeLink: "https://github.com/qq865738120/easyUI",
     images: [
-      { width: 400, height: 400, thumb: "9-1.jpg" },
-      { width: 400, height: 400, thumb: "9-2.jpeg" },
-      { width: 400, height: 400, thumb: "9-3.jpeg" },
+      { width: 400, height: 400, thumb: "9-1.webp" },
+      { width: 400, height: 400, thumb: "9-2.webp" },
+      { width: 400, height: 400, thumb: "9-3.webp" },
     ],
     code: {
       language: "javascript",
@@ -1927,9 +1921,9 @@ Component({
     ),
     codeLink: "https://github.com/qq865738120/react-neat",
     images: [
-      { width: 400, height: 400, thumb: "10-1.png" },
-      { width: 400, height: 400, thumb: "10-2.png" },
-      { width: 400, height: 400, thumb: "10-3.png" },
+      { width: 400, height: 400, thumb: "10-1.webp" },
+      { width: 400, height: 400, thumb: "10-2.webp" },
+      { width: 400, height: 400, thumb: "10-3.webp" },
     ],
     code: {
       language: "typescript",
@@ -2179,9 +2173,9 @@ export function useStoreContext<T, U>(store: Store): StoreReducer<T, U> {
       </Group>
     ),
     images: [
-      { width: 400, height: 400, thumb: "11-1.png" },
-      { width: 400, height: 400, thumb: "11-2.png" },
-      { width: 400, height: 400, thumb: "11-3.png" },
+      { width: 400, height: 400, thumb: "11-1.webp" },
+      { width: 400, height: 400, thumb: "11-2.webp" },
+      { width: 400, height: 400, thumb: "11-3.webp" },
     ],
     code: {
       language: "tsx",
@@ -2482,9 +2476,9 @@ export default Vue.extend({
       </Group>
     ),
     images: [
-      { width: 400, height: 400, thumb: "12-1.png" },
-      { width: 400, height: 400, thumb: "12-2.png" },
-      { width: 400, height: 400, thumb: "12-3.png" },
+      { width: 400, height: 400, thumb: "12-1.webp" },
+      { width: 400, height: 400, thumb: "12-2.webp" },
+      { width: 400, height: 400, thumb: "12-3.webp" },
     ],
     codeLink: "https://github.com/qq865738120/webpack-del-file-plugin",
     code: {
