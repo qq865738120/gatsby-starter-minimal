@@ -358,7 +358,7 @@ const IndexPage = () => {
                         <Image
                           radius="md"
                           className="first-image"
-                          src={`../../${item.images[0].thumb}`}
+                          src={`https://minio.ddnszwj.top/web/personal-page/${item.images[0].thumb}`}
                           height={300}
                           onClick={onImageClick.bind(this, item.images[0])}
                         />
@@ -373,7 +373,7 @@ const IndexPage = () => {
                                 <Image
                                   radius="md"
                                   className="image"
-                                  src={`../../${it.thumb}`}
+                                  src={`https://minio.ddnszwj.top/web/personal-page/${it.thumb}`}
                                   key={it.thumb}
                                   height={200}
                                   onClick={onImageClick.bind(this, it)}
@@ -455,7 +455,7 @@ const IndexPage = () => {
         size={isPhone ? 340 : (imagePreview.width + 40)}
         title="图片预览"
       >
-        <Image width={isPhone ? 300 : imagePreview.width} src={"../../" + imagePreview.thumb} />
+        <Image width={isPhone ? 300 : imagePreview.width} src={"https://minio.ddnszwj.top/web/personal-page/" + imagePreview.thumb} />
       </Modal>
     </main>
   );

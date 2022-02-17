@@ -57,13 +57,13 @@ export const infoList = [
 
 export const companyList = [
   {
-    image: "../../hydee.webp",
+    image: "https://minio.ddnszwj.top/web/personal-page/hydee.webp",
     name: "上海海典软件股份有限公司",
     infos: [
       {
         name: "工作时间",
         icon: "icon-time-circle",
-        detail: <Highlight highlight="">2019年6月 - 目前</Highlight>,
+        detail: <Highlight highlight="">2020年6月 - 目前</Highlight>,
       },
       {
         name: "简介",
@@ -99,13 +99,13 @@ export const companyList = [
     ],
   },
   {
-    image: "../../webull.webp",
+    image: "https://minio.ddnszwj.top/web/personal-page/webull.webp",
     name: "湖南福米信息科技有限责任公司",
     infos: [
       {
         name: "工作时间",
         icon: "icon-time-circle",
-        detail: <Highlight highlight="">2017年4月 - 2019年6月</Highlight>,
+        detail: <Highlight highlight="">2017年4月 - 2020年6月</Highlight>,
       },
       {
         name: "简介",
