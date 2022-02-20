@@ -428,8 +428,7 @@ const IndexPage = () => {
             <SimpleGrid className="content" cols={2} spacing="lg">
               <div className="right">
                 <Image
-                  src="https://mantine.dev/static/dark-theme-image-6f35e745c6b3f25b9ed3b7d5fab1ec72.png"
-                  height={450}
+                  src="https://minio.ddnszwj.top/web/personal-page/lanqiaobei.jpg"
                   alt="Norway"
                 />
               </div>
